@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        .padding { padding: 25px; }
+        .margin { margin: 5px; }
+        .service-content { display: none; }
+        .actived { display: block; }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="assets/img/portugal.svg" width="112" height="28">
+                </a>
+            
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <input class="input is-rounded padding margin" type="text" placeholder="Digite o que procura...">
+                        <a class="button is-primary is-rounded  padding margin">Buscar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    SEF Monitor
+                </h1>
+                <h2 class="subtitle">
+                    Aplicação criada com o intuito de mostrar as datas disponíveis para renovação ou concessão de documentos.
+                </h2>
+                <div class="notification">
+                    <button class="delete"></button>
+                    Vale ressaltar que esse é um projeto open-source e apenas informativo. Não realizando nenhum tipo de intermedio entre o cidadão e SEF.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="tabs is-centered is-toggle is-toggle-rounded">
+            <ul>
+                <li class="type-service is-active">
+                    <a>
+                        <span class="icon is-small">
+                            <i class="fas fa-calendar-plus" aria-hidden="true"></i>
+                        </span>
+                        <span>Renovação Título Residência</span>
+                    </a>
+                </li>
+                <li class="type-service ">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-id-card-alt" aria-hidden="true"></i></span>
+                        <span>Concessão Cartão Residência (UE)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container service-content actived renewal">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><abbr title="Zonas em Portugal">Local</abbr></th>
+                    <th>Última atualização</th>
+                    <th><abbr title="Datas disponiveis">Datas</abbr></th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th><abbr title="Zonas em Portugal">Local</abbr></th>
+                    <th>Última atualização</th>
+                    <th><abbr title="Datas disponiveis">Datas</abbr></th>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <th>Delegação da Horta</th>
+                    <td>2019-11-08T16:33:16.637Z</td>
+                    <td>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Delegação da Horta</th>
+                    <td>2019-11-08T16:33:16.637Z</td>
+                    <td>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Delegação da Horta</th>
+                    <td>2019-11-08T16:33:16.637Z</td>
+                    <td>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container service-content award">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><abbr title="Zonas em Portugal">Local</abbr></th>
+                    <th>Última atualização</th>
+                    <th><abbr title="Datas disponiveis">Datas</abbr></th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th><abbr title="Zonas em Portugal">Local</abbr></th>
+                    <th>Última atualização</th>
+                    <th><abbr title="Datas disponiveis">Datas</abbr></th>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <th>Delegação da Horta</th>
+                    <td>2019-11-08T16:33:16.637Z</td>
+                    <td>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Delegação da Horta</th>
+                    <td>2019-11-08T16:33:16.637Z</td>
+                    <td>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Delegação da Horta</th>
+                    <td>2019-11-08T16:33:16.637Z</td>
+                    <td>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                        <span class="tag is-primary">2019-10-29 11:30</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            Contribua no Github <a href="https://github.com/VitorOlivier/sef-monitor-web">sef-monitor-web</a> | Design by <a href="https://bulma.io">Bulma.io</a>
+        </p>
+    </div>
+</footer>
+</html>
