@@ -18,7 +18,7 @@ class Header extends React.Component {
           <div className="navbar-menu">
             <div className="navbar-end">
               <div className="navbar-item">
-                <input className="input is-rounded padding margin" type="text" placeholder="Digite o que procura..." />
+                <input className="input is-rounded padding margin" type="text" placeholder="Digite aqui..." />
                 <a className="button is-primary is-rounded  padding margin">Buscar</a>
               </div>
             </div>
