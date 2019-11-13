@@ -1,79 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../Header';
-import Table from 'react-bootstrap/Table';
-import Form from 'react-bootstrap/Form';
-import Badge from 'react-bootstrap/Badge';
-import Container from 'react-bootstrap/Container';
+import AvailableTimesTable from '../AvailableTimesTable';
 import { addSnapshotListeners } from '../../lib/firebase';
 
 function App() {
   const [selectedService, selectService] = useState('Renovação Título Residência');
-  const [agendamentos, updateAgendamentos] = useState({});
+  const [schedules, updateSchedules] = useState({});
 
   useEffect(() => {
-    async function fetchAgendamentos() {
-      addSnapshotListeners((servico, local, dados) => {
-        updateAgendamentos(agendamentos => ({
-          ...agendamentos,
-          [servico]: {
-            ...agendamentos[servico],
-            [local]: dados,
+    async function fetchSchedules() {
+      addSnapshotListeners((service, local, data) => {
+        updateSchedules(schedules => ({
+          ...schedules,
+          [service]: {
+            ...schedules[service],
+            [local]: data,
           },
         }));
       });
     }
-    fetchAgendamentos();
+    fetchSchedules();
   }, []);
 
   const handleServiceChange = e => {
     selectService(e.target.value);
   };
+  
+  const locations = schedules[selectedService];
 
-  const locais = agendamentos[selectedService];
   return (
     <React.Fragment>
       <Header />
-      <Container>
-        <Form.Group controlId="exampleForm.ControlSelect1">
-          <Form.Label>Serviço</Form.Label>
-          <Form.Control as="select" value={selectedService} onChange={handleServiceChange}>
-            <option>Renovação Título Residência</option>
-            <option>Concessão Cartão Residência (UE)</option>
-          </Form.Control>
-        </Form.Group>
-        {locais && (
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Local</th>
-                <th>Última atualização</th>
-                <th>Datas</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.keys(locais).map(local => {
-                const localObj = locais[local];
-                return (
-                  <tr key={localObj.timestamp}>
-                    <td>{local}</td>
-                    <td>{localObj.timestamp.toDate().toISOString()}</td>
-                    <td>
-                      {Object.keys(localObj.datas).map(data => {
-                        const dataEHora = `${data} ${localObj.datas[data]}`;
-                        return (
-                          <Badge key={dataEHora} variant="info">
-                            {dataEHora}
-                          </Badge>
-                        );
-                      })}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </Table>
-        )}
-      </Container>
+      <div className="container service-content actived renewal">
+        <AvailableTimesTable availableTimes={locations}></AvailableTimesTable>
+      </div>
     </React.Fragment>
   );
 }
