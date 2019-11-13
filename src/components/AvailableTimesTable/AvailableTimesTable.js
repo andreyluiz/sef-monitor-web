@@ -3,8 +3,8 @@ import React from 'react';
 class AvailableTimesTable extends React.Component {
     render() {
         return (
-            <section class="section">
-                <div class="container">
+            <section className="section">
+                <div className="container">
                     <table className="table">
                         <thead>
                             <tr>
