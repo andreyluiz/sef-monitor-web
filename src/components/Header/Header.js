@@ -1,22 +1,62 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Nav from 'react-bootstrap/Nav';
 
-const Header = () => (
-  <Navbar bg="light" expand="lg">
-    <Navbar.Brand href="/">SEF Monitor</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto"></Nav>
-      <Form inline>
-        <FormControl type="text" placeholder="Buscar" className="mr-sm-2" />
-        <Button variant="outline-success">Buscar</Button>
-      </Form>
-    </Navbar.Collapse>
-  </Navbar>
-);
+class Header extends React.Component {
+  render() {
+    return (
+      <header className="container">
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <a className="navbar-item">
+              <img src="assets/img/portugal.svg" width={112} height={28} />
+            </a>
+            <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </a>
+          </div>
+          <div className="navbar-menu">
+            <div className="navbar-end">
+              <div className="navbar-item">
+                <input className="input is-rounded padding margin" type="text" placeholder="Digite aqui..." />
+                <a className="button is-primary is-rounded  padding margin">Buscar</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section className="hero">
+          <div className="hero-body">
+            <div className="container">
+              <h1 className="title">
+                SEF Monitor
+              </h1>
+              <h2 className="subtitle">
+                Veja aqui os horários disponíveis para renovação ou concessão de documentos.
+              </h2>
+            </div>
+          </div>
+        </section>
+        <div className="tabs is-centered is-toggle is-toggle-rounded">
+          <ul>
+              <li className="type-service is-active">
+                  <a>
+                      <span className="icon is-small">
+                          <i className="fas fa-calendar-plus" aria-hidden="true"></i>
+                      </span>
+                      <span>Renovação Título Residência</span>
+                  </a>
+              </li>
+              <li className="type-service ">
+                  <a>
+                      <span className="icon is-small"><i className="fas fa-id-card-alt" aria-hidden="true"></i></span>
+                      <span>Concessão Cartão Residência (UE)</span>
+                  </a>
+              </li>
+          </ul>
+          </div>
+      </header>
+    )
+  }
+}
 
 export default Header;
