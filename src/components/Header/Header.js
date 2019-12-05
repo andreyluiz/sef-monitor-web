@@ -31,12 +31,8 @@ class Header extends React.Component {
                 SEF Monitor
               </h1>
               <h2 className="subtitle">
-                Aplicação criada com o intuito de mostrar as datas disponíveis para renovação ou concessão de documentos.
+                Veja aqui os horários disponíveis para renovação ou concessão de documentos.
               </h2>
-              <div className="notification">
-                <button className="delete" />
-                Vale ressaltar que esse é um projeto open-source e apenas informativo. Não realizando nenhum tipo de intermedio entre o cidadão e SEF.
-              </div>
             </div>
           </div>
         </section>
